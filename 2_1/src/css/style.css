@@ -1,0 +1,16 @@
+.game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 480px;
+}
+
+.game div {
+  height: 120px;
+  border: 1px solid #000;
+  position: relative;
+}
+img {
+  position: absolute;
+  margin: auto;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
