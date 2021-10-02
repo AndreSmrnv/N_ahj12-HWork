@@ -1,6 +1,7 @@
 import genPosition from './position.js';
 import Goblin from '../img/goblin.png';
-const myImg = new Image(77,77);
+
+const myImg = new Image(77, 77);
 myImg.src = Goblin;
 myImg.id = 'killme';
 
@@ -11,12 +12,11 @@ export default class Game {
     [this.gameInfoDiv] = document.getElementsByClassName('game__info');
     this.setActive = this.changeActive.bind(this);
     this.currIndex = null;
-    this.init()
+    this.init();
   }
 
-  init() {   
+  init() {
     this.createCells(4);
-    
   }
 
   createCells(xy) {
@@ -36,8 +36,8 @@ export default class Game {
   }
 
   removeImg() {
-    const activeImg = document.querySelector("#killme");  
-    activeImg && activeImg.parentElement.removeChild(myImg); 
+    const activeImg = document.querySelector('#killme');
+    activeImg && activeImg.parentElement.removeChild(myImg);
   }
 
   gameState(scores, status) {
